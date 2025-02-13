@@ -106,7 +106,7 @@ const Faqs = () => {
 				/>
 			</div>
 
-			<div className="flex place-content-center items-center gap-4">
+			<div className="flex place-content-center items-center gap-8">
 				<div className="relative group">
 					<Link
 						className="bg-brand-red border border-black grid place-content-center rounded-full p-2 transition-all duration-500 ease-in-out hover:mt-1 focus:mt-1 md:p-1 absolute z-50 right-0.5 top-0 hover:bg-light-pink"
@@ -126,7 +126,7 @@ const Faqs = () => {
 						</svg>
 					</Link>
 
-					<span className="inline-block relative size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
+					<span className="inline-block relative size-14 md:size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
 				</div>
 
 				<div className="relative group">
@@ -149,7 +149,7 @@ const Faqs = () => {
 						</svg>
 					</Link>
 
-					<span className="inline-block relative size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
+					<span className="inline-block relative size-14 md:size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
 				</div>
 			</div>
 		</footer>

@@ -26,7 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${outfit.className} ${oliver.variable} text-black selection:bg-brand-yellow antialiased break-words`}
+				className={`${outfit.className} ${oliver.variable} text-black selection:bg-brand-yellow antialiased break-words break-words [word-break:break-word] [word-wrap:break-word]`}
 			>
 				<main>{children}</main>
 			</body>

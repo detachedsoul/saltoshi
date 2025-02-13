@@ -26,13 +26,14 @@ const Accordion = ({
 				type="button"
 				onClick={toggleAccordion}
 			>
-				<span className="text-2xl header">{question}</span>
+				<span className="text-xl md:text-2xl header">{question}</span>
 
 				<span
 					className={`inline-block rounded-full`}
 				>
 					{isExpanded ? (
 						<svg
+                            className="size-10 md:size-[50px]"
 							width="50"
 							height="50"
 							viewBox="0 0 60 61"
@@ -52,6 +53,7 @@ const Accordion = ({
 						</svg>
 					) : (
 						<svg
+                            className="size-10 md:size-[50px]"
 							width="50"
 							height="50"
 							viewBox="0 0 60 61"

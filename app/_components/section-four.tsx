@@ -114,7 +114,7 @@ const SectionFour = () => {
 								/>
 							</svg>
 
-							<li className="space-y-2">
+							<span className="space-y-2">
 								<span className="block">Buy/Sell Tax (7%)</span>
 
 								<ul className="list-disc space-y-1.5 list-inside">
@@ -128,7 +128,7 @@ const SectionFour = () => {
 
 									<li> 2% Marketing & development</li>
 								</ul>
-							</li>
+							</span>
 						</li>
 					</ul>
 
@@ -147,7 +147,7 @@ const SectionFour = () => {
 								/>
 							</svg>
 
-							<li className="space-y-2">
+							<span className="space-y-2">
 								<span className="block">
 									Anti-Whale & Anti-Bot Measures
 								</span>
@@ -163,7 +163,7 @@ const SectionFour = () => {
 										Higher sell tax for first 24-48 hours
 									</li>
 								</ul>
-							</li>
+							</span>
 						</li>
 
 						<li className="flex items-center gap gap-4">

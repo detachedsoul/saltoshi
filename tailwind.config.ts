@@ -16,6 +16,9 @@ export default {
 			fontFamily: {
 				oliver: ["var(--font-oliver)"],
 			},
+			backgroundImage: {
+				hero: "linear-gradient(rgb(254 198 46 / 1), rgb(254 198 46 / 1)), url('../assets/bg.png')",
+			},
 		},
 	},
 	plugins: [],

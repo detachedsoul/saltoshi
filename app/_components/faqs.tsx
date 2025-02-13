@@ -1,9 +1,110 @@
 import Link from "next/link";
+import Accordion from "./accordion";
 
 const Faqs = () => {
     return (
 		<footer className="bg-brand-yellow space-y-10 padding py-10 lg:py-[7%] xl:py-[10%] selection:bg-brand-red selection:text-white">
 			<h2 className="header text-3xl md:text-5xl text-center">FAQs</h2>
+
+			<div className="space-y-4">
+				<Accordion
+					question="What is Soltoshi?"
+					answer={
+						<p>
+							Soltoshi is a multi-chain meme coin that combines
+							the speed and low fees of Solana, the security of
+							Bitcoin (via Stacks), and cross-chain utility with
+							Bitcoin Ordinals. It’s designed for seamless
+							trading, staking rewards, and long-term
+							sustainability.
+						</p>
+					}
+				/>
+
+				<Accordion
+					question="What makes Soltoshi unique?"
+					answer={
+						<ul className="list-disc list-inside">
+							<li>
+								Unlike most meme coins that exist purely for
+								speculation, Soltoshi offers:
+							</li>
+
+							<li>Fast & cheap transactions on Solana</li>
+
+							<li>
+								Bitcoin-level security with Stacks’ settlement
+								layer
+							</li>
+
+							<li>
+								Cross-chain utility – trade on Solana, bridge to
+								Bitcoin Ordinals, and stake on Stacks
+							</li>
+
+							<li>
+								Fair launch & decentralization – no VC dumps, no
+								hidden mint functions
+							</li>
+						</ul>
+					}
+				/>
+
+				<Accordion
+					question="Is there a buy/sell tax? How is it used?"
+					answer={
+						<>
+							<p>
+								Yes, in the version 2, there is a 7% buy/sell
+								tax is applied to support growth and stability:
+							</p>
+
+							<ul className="list-disc list-inside">
+								<li>
+									2% reflections in SOL (rewards for holders)
+								</li>
+
+								<li>
+									2% liquidity pool auto-growth (stabilizes
+									price & deepens liquidity)
+								</li>
+
+								<li>
+									1% auto buyback & burn (deflationary
+									mechanism)
+								</li>
+
+								<li>
+									2% marketing & development (funding
+									campaigns & partnerships)
+								</li>
+							</ul>
+						</>
+					}
+				/>
+
+				<Accordion
+					question="Can I stake Soltoshi?"
+					answer={
+						<p>
+							Yes! At version 2, staking on Stacks allows holders
+							to earn long-term rewards. More details on staking
+							pools will be released soon.
+						</p>
+					}
+				/>
+
+				<Accordion
+					question="Does Soltoshi ensure security?"
+					answer={
+						<p>
+							Yes! Soltoshi merges Solana’s speed, Bitcoin’s
+							security, and Stacks’ decentralization into a
+							multi-chain asset.
+						</p>
+					}
+				/>
+			</div>
 
 			<div className="flex place-content-center items-center gap-4">
 				<div className="relative group">

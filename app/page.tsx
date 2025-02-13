@@ -1,3 +1,5 @@
+import Image from "next/image";
+import RoadmapImage from "@/assets/roadmap.png";
 import Faqs from "./_components/faqs";
 import Header from "./_components/header";
 import HeroSection from "./_components/hero-section";
@@ -18,6 +20,8 @@ const Index = () => {
 			<SectionOne />
 
 			<SectionTwo />
+
+            <Image src={RoadmapImage} alt="Roadmap" priority />
 
 			<SectionFour />
 

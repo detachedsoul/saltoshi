@@ -14,8 +14,4 @@
     .padding {
         @apply px-4 lg:px-[7%] xl:px-[10%]
     }
-
-    .hero-bg {
-        @apply bg-hero bg-left-top
-    }
 }

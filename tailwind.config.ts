@@ -15,9 +15,6 @@ export default {
 			fontFamily: {
 				oliver: ["var(--font-oliver)"],
 			},
-			backgroundImage: {
-				hero: "url('../assets/bg.png')",
-			},
 		},
 	},
 	plugins: [],

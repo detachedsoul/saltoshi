@@ -39,12 +39,15 @@ const Header = () => {
 				/>
 			</Link>
 
-			<ul className={`flex items-center flex-col gap-8 lg:flex-row absolute bg-brand-yellow top-full py-4 shadow lg:shadow-none left-0 w-full transition-transform duration-500 z-50 ease-in-out lg:w-auto lg:translate-y-0 lg:static lg:bg-transparent ${isOpen ? "translate-y-0" : "-translate-y-[200%]"}`}>
+			<ul className={`flex items-center flex-col gap-8 lg:flex-row absolute bg-brand-yellow top-full py-4 shadow lg:shadow-none left-0 w-full transition-transform duration-500 z-[9999] ease-in-out lg:w-auto lg:translate-y-0 lg:static lg:bg-transparent ${isOpen ? "translate-y-0" : "-translate-y-[200%]"}`}>
 				{sections.map((section) => (
 					<li key={section.id}>
 						<button
-							className="text-2xl inline-block transition-all hover:px-1 duration-300 ease-in-out"
+							className="text-xl inline-block transition-all hover:px-1 duration-300 ease-in-out"
 							type="button"
+                            onClick={() => document.querySelector(`#${section.id}`)?.scrollIntoView({
+                                behavior: "smooth"
+                            })}
 						>
 							{section.name.toUpperCase()}
 						</button>

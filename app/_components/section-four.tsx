@@ -1,17 +1,35 @@
 import Link from "next/link";
+import * as motion from "motion/react-client";
 
 const SectionFour = () => {
 	return (
-		<section
-			className="bg-black text-white py-10 space-y-10 scroll-mt-10 selection:bg-light-pink selection:text-black"
+		<motion.section
+			className="bg-black text-white py-10 space-y-10 scroll-mt-10 selection:bg-light-pink selection:text-black overflow-hidden"
 			id="tokenomics"
 		>
 			<h2 className="header text-3xl md:text-5xl text-center max-md:px-10 padding">
 				TOKENOMICS
 			</h2>
 
-			<div className="space-y-4 header max-md:px-10 padding text-xl md:text-2xl">
-				<p className="flex items-center gap-4 text-2xl md:text-3xl">
+			<motion.div
+				className="space-y-4 header max-md:px-10 padding text-xl md:text-2xl"
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.2 }}
+			>
+				<motion.p
+					className="flex items-center gap-4 text-2xl md:text-3xl"
+					variants={{
+						hidden: { opacity: 0, y: 50, scale: 0.9 },
+						visible: { opacity: 1, y: 0, scale: 1 },
+					}}
+					transition={{
+						type: "spring",
+						stiffness: 150,
+						damping: 12,
+						mass: 0.8,
+					}}
+				>
 					<svg
 						className="shrink-0"
 						width="24"
@@ -32,18 +50,55 @@ const SectionFour = () => {
 						/>
 					</svg>
 					100% Fair Launch (No Team Allocation)
-				</p>
+				</motion.p>
 
-				<p>
+				<motion.p
+					variants={{
+						hidden: { opacity: 0, y: 50, scale: 0.9 },
+						visible: { opacity: 1, y: 0, scale: 1 },
+					}}
+					transition={{
+						type: "spring",
+						stiffness: 150,
+						damping: 12,
+						mass: 0.8,
+					}}
+				>
 					📌 Best for: Full decentralization, no team allocation,
 					strong investor trust
-				</p>
-			</div>
+				</motion.p>
+			</motion.div>
 
-			<div className="mx-4 md:mx-10 h-4 after:bg-brand-red z-[1024] rounded-full relative after:absolute after:z-10 after:size-full bg-white after:rounded-full after:right-0.5 after:-top-1" />
+			<motion.div
+				initial={{ opacity: 0, x: 100 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				transition={{
+					type: "spring",
+					stiffness: 100,
+					damping: 15,
+					mass: 1,
+				}}
+			>
+				<div className="mx-4 md:mx-10 h-4 after:bg-brand-red z-[1024] rounded-full relative after:absolute after:z-10 after:size-full bg-white after:rounded-full after:right-0.5 after:-top-1" />
+			</motion.div>
 
-			<div className="space-y-8 max-md:px-10 padding">
-				<p className="header flex items-center gap-4 text-2xl md:text-3xl">
+			<motion.div
+				className="space-y-8 max-md:px-10 padding"
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.2 }}
+			>
+				<motion.p
+					className="header flex items-center gap-4 text-2xl md:text-3xl"
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{
+						type: "spring",
+						stiffness: 100,
+						damping: 15,
+						mass: 1,
+					}}
+				>
 					<svg
 						className="shrink-0"
 						width="24"
@@ -64,10 +119,20 @@ const SectionFour = () => {
 						/>
 					</svg>
 					Hybrid Model (Small Vested Team Reserve)
-				</p>
+				</motion.p>
 
-				<div className="grid gap-4 md:grid-cols-2">
-					<ul className="space-y-4">
+				<motion.div className="grid gap-4 md:grid-cols-2">
+					<motion.ul
+						className="space-y-4"
+						initial={{ opacity: 0, x: 100 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{
+							type: "spring",
+							stiffness: 100,
+							damping: 15,
+							mass: 1,
+						}}
+					>
 						<li className="flex items-center gap gap-4">
 							<svg
 								className="shrink-0"
@@ -117,22 +182,32 @@ const SectionFour = () => {
 							<span className="space-y-2">
 								<span className="block">Buy/Sell Tax (7%)</span>
 
-								<ul className="list-disc space-y-1.5 list-inside">
-									<li>2% Holder rewards (SOL reflections)</li>
+								<span className="list-disc space-y-1.5 list-inside">
+									<span>2% Holder rewards (SOL reflections)</span>
 
-									<li>2% Liquidity pool growth</li>
+									<span>2% Liquidity pool growth</span>
 
-									<li>
+									<span>
 										1% Auto buyback & burn (deflationary)
-									</li>
+									</span>
 
-									<li> 2% Marketing & development</li>
-								</ul>
+									<span>2% Marketing & development</span>
+								</span>
 							</span>
 						</li>
-					</ul>
+					</motion.ul>
 
-					<ul className="space-y-4">
+					<motion.ul
+						className="space-y-4"
+						initial={{ opacity: 0, x: -100 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{
+							type: "spring",
+							stiffness: 100,
+							damping: 15,
+							mass: 1,
+						}}
+					>
 						<li className="flex items-start gap gap-4">
 							<svg
 								className="shrink-0"
@@ -196,38 +271,76 @@ const SectionFour = () => {
 								/>
 							</svg>
 
-							<li className="space-y-2">
+							<span className="space-y-2">
 								<span className="block">Distribution</span>
 
-								<ul className="list-disc space-y-1.5 list-inside">
-									<li>
+								<span className="list-disc space-y-1.5 list-inside">
+									<span>
 										85% Public (fair launch, no VC dumps)
-									</li>
+									</span>
 
-									<li>5% Marketing & partnerships</li>
+									<span>5% Marketing & partnerships</span>
 
-									<li>5% Liquidity (locked for 6 months)</li>
+									<span>5% Liquidity (locked for 6 months)</span>
 
-									<li>
+									<span>
 										5% Vested Team Reserve (locked for 12+
 										months)
-									</li>
-								</ul>
-							</li>
+									</span>
+								</span>
+							</span>
 						</li>
-					</ul>
-				</div>
+					</motion.ul>
+				</motion.div>
 
-				<p className="header text-xl md:text-2xl">
+				<motion.p
+					className="header text-xl md:text-2xl"
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{
+						type: "spring",
+						stiffness: 100,
+						damping: 15,
+						mass: 1,
+					}}
+				>
 					📌 Best for: Balancing decentralization with sustainability
 					for long-term growth
-				</p>
-			</div>
+				</motion.p>
+			</motion.div>
 
-			<div className="mx-4 md:mx-10 h-4 after:bg-brand-yellow rounded-full relative after:absolute after:size-full bg-white after:rounded-full after:right-0.5 after:-top-1" />
+			<motion.div
+				initial={{ opacity: 0, x: 100 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				transition={{
+					type: "spring",
+					stiffness: 100,
+					damping: 15,
+					mass: 1,
+				}}
+			>
+				<div className="mx-4 md:mx-10 h-4 after:bg-brand-yellow z-[1024] rounded-full relative after:absolute after:z-10 after:size-full bg-white after:rounded-full after:right-0.5 after:-top-1" />
+			</motion.div>
 
-			<div className="space-y-4 header max-md:px-10 padding text-xl md:text-2xl">
-				<p className="flex items-center gap-4 text-2xl md:text-3xl">
+			<motion.div
+				className="space-y-4 header max-md:px-10 padding text-xl md:text-2xl"
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.2 }}
+			>
+				<motion.p
+					className="flex items-center gap-4 text-2xl md:text-3xl"
+					variants={{
+						hidden: { opacity: 0, y: 50, scale: 0.9 },
+						visible: { opacity: 1, y: 0, scale: 1 },
+					}}
+					transition={{
+						type: "spring",
+						stiffness: 150,
+						damping: 12,
+						mass: 0.8,
+					}}
+				>
 					<svg
 						className="shrink-0"
 						width="24"
@@ -248,10 +361,23 @@ const SectionFour = () => {
 						/>
 					</svg>
 					Development-Focused (Soltoshi Ordinals NFT Collection)
-				</p>
+				</motion.p>
 
-				<p>📌 Best for: Community identity and soltoshi cult culture</p>
-			</div>
+				<motion.p
+					variants={{
+						hidden: { opacity: 0, y: 50, scale: 0.9 },
+						visible: { opacity: 1, y: 0, scale: 1 },
+					}}
+					transition={{
+						type: "spring",
+						stiffness: 150,
+						damping: 12,
+						mass: 0.8,
+					}}
+				>
+					📌 Best for: Community identity and soltoshi cult culture
+				</motion.p>
+			</motion.div>
 
 			<div className="grid place-content-center">
 				<div className="relative group  mx-auto w-auto inline-block">
@@ -283,7 +409,7 @@ const SectionFour = () => {
 					<span className="inline-block absolute z-10 size-full bg-white border border-white rounded-full -right-0.5 top-1 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out py-2"></span>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

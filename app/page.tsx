@@ -18,7 +18,7 @@ const Index = () => {
 				<HeroSection />
 
 				<Image
-					className="pointer-events-none h-[300px] md:h-full absolute top-0 right-0"
+					className="hidden md:block pointer-events-none h-[300px] md:h-full absolute top-0 right-0"
 					src={HeroBg}
 					alt=""
 					priority

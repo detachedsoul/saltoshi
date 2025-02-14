@@ -2,12 +2,12 @@ import Link from "next/link";
 
 const HeroSection = () => {
     return (
-		<section className="py-10 lg:py-[7%] xl:py-[10%] space-y-8 md:w-4/5 lg:w-3/5">
+		<section className="py-10 relative z-50 lg:py-[7%] xl:py-[10%] space-y-8 md:w-4/5 lg:w-3/5">
 			<h1 className="text-4xl lg:text-8xl lg:leading-[90px] header">
 				Fast, Cheap, Secure - Future of Trading
 			</h1>
 
-			<p>
+			<p className="w-4/5">
 				Soltoshi merges Solana’s speed, Bitcoin’s security, and Stacks’
 				decentralization into a multi-chain asset. It offers instant
 				transactions and low fees for traders and meme enthusiasts.

@@ -27,7 +27,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<header className="flex items-center justify-between gap-4 py-4 lg:py-6 header relative">
+		<header className="flex items-center justify-between gap-4 py-4 lg:py-6 header relative z-50">
 			<Link href="/">
 				<Image
 					className="size-16"
@@ -39,7 +39,7 @@ const Header = () => {
 				/>
 			</Link>
 
-			<ul className={`flex items-center flex-col gap-8 lg:flex-row absolute bg-brand-yellow top-full py-4 shadow lg:shadow-none left-0 w-full transition-transform duration-500 ease-in-out lg:w-auto lg:translate-y-0 lg:static ${isOpen ? "translate-y-0" : "-translate-y-[200%]"}`}>
+			<ul className={`flex items-center flex-col gap-8 lg:flex-row absolute bg-brand-yellow top-full py-4 shadow lg:shadow-none left-0 w-full transition-transform duration-500 z-50 ease-in-out lg:w-auto lg:translate-y-0 lg:static lg:bg-transparent ${isOpen ? "translate-y-0" : "-translate-y-[200%]"}`}>
 				{sections.map((section) => (
 					<li key={section.id}>
 						<button

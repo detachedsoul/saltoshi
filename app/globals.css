@@ -16,6 +16,6 @@
     }
 
     .hero-bg {
-        @apply bg-hero
+        @apply bg-hero bg-left-top
     }
 }

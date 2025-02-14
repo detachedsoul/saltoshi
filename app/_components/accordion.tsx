@@ -22,7 +22,7 @@ const Accordion = ({
 			}`}
 		>
 			<button
-				className="leading-[170%] text-lg flex items-center gap-10 justify-between text-left w-full py-2 px-6"
+				className="leading-[170%] text-lg flex items-center gap-10 justify-between text-left w-full py-2 pl-6 pr-2"
 				type="button"
 				onClick={toggleAccordion}
 			>

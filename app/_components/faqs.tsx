@@ -113,7 +113,7 @@ const Faqs = () => {
 						href=""
 					>
 						<svg
-							className="size-10 md:size-6"
+							className="size-6"
 							width="22"
 							height="22"
 							viewBox="0 0 38 38"
@@ -135,12 +135,11 @@ const Faqs = () => {
 						href=""
 					>
 						<svg
-							className="size-10 md:size-6"
+							className="size-6"
 							width="22"
 							height="22"
 							viewBox="0 0 38 34"
 							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
 								d="M29.7021 0.182129L20.2997 10.93L12.1702 0.182129H0.395996L14.4644 18.5782L1.13081 33.8179H6.84027L17.1311 22.0592L26.1248 33.8179H37.6074L22.9422 14.43L35.4083 0.182129H29.7021ZM27.6996 30.4026L7.05932 3.41807H10.4522L30.8613 30.4026H27.6996Z"

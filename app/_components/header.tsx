@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "motion/react";
 
 const sections = [
 	{
@@ -27,7 +28,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<header className="flex items-center justify-between gap-4 py-4 lg:py-6 header relative z-50">
+		<motion.header className="flex items-center justify-between gap-4 py-4 lg:py-6 header relative z-50">
 			<Link href="/">
 				<Image
 					className="size-16"
@@ -39,24 +40,64 @@ const Header = () => {
 				/>
 			</Link>
 
-			<ul className={`flex items-center flex-col gap-8 lg:flex-row absolute bg-brand-yellow top-full py-4 shadow lg:shadow-none left-0 w-full transition-transform duration-500 z-[9999] ease-in-out lg:w-auto lg:translate-y-0 lg:static lg:bg-transparent ${isOpen ? "translate-y-0" : "-translate-y-[200%]"}`}>
+			<motion.ul
+				className={`flex items-center flex-col gap-8 lg:flex-row absolute bg-brand-yellow top-full py-4 shadow lg:shadow-none left-0 w-full transition-transform duration-500 z-[9999] ease-in-out lg:w-auto lg:translate-y-0 lg:static lg:bg-transparent ${
+					isOpen ? "translate-y-0" : "-translate-y-[200%]"
+				}`}
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.2 }}
+			>
 				{sections.map((section) => (
-					<li key={section.id}>
+					<motion.li
+						key={section.id}
+						variants={{
+							hidden: { opacity: 0, y: 50, scale: 0.9 },
+							visible: { opacity: 1, y: 0, scale: 1 },
+						}}
+						transition={{
+							type: "spring",
+							stiffness: 150,
+							damping: 12,
+							mass: 0.8,
+						}}
+					>
 						<button
 							className="text-xl inline-block transition-all hover:px-1 duration-300 ease-in-out"
 							type="button"
-                            onClick={() => document.querySelector(`#${section.id}`)?.scrollIntoView({
-                                behavior: "smooth"
-                            })}
+							onClick={() =>
+								document
+									.querySelector(`#${section.id}`)
+									?.scrollIntoView({
+										behavior: "smooth",
+									})
+							}
 						>
 							{section.name.toUpperCase()}
 						</button>
-					</li>
+					</motion.li>
 				))}
-			</ul>
+			</motion.ul>
 
-			<div className="hidden md:flex items-center gap-4">
-				<div className="relative group">
+			<motion.div
+				className="hidden md:flex items-center gap-4"
+				initial="hidden"
+				whileInView="visible"
+				transition={{ staggerChildren: 0.2 }}
+			>
+				<motion.div
+					className="relative group"
+					variants={{
+						hidden: { opacity: 0, y: 50, scale: 0.9 },
+						visible: { opacity: 1, y: 0, scale: 1 },
+					}}
+					transition={{
+						type: "spring",
+						stiffness: 150,
+						damping: 12,
+						mass: 0.8,
+					}}
+				>
 					<Link
 						className="bg-brand-red border border-black grid place-content-center rounded-full p-2 transition-all duration-500 ease-in-out hover:mt-1 focus:mt-1 md:p-1 absolute z-50 right-0.5 top-0 hover:bg-light-pink"
 						href=""
@@ -76,9 +117,21 @@ const Header = () => {
 					</Link>
 
 					<span className="inline-block relative size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
-				</div>
+				</motion.div>
 
-				<div className="relative group">
+				<motion.div
+					className="relative group"
+					variants={{
+						hidden: { opacity: 0, y: 50, scale: 0.9 },
+						visible: { opacity: 1, y: 0, scale: 1 },
+					}}
+					transition={{
+						type: "spring",
+						stiffness: 150,
+						damping: 12,
+						mass: 0.8,
+					}}
+				>
 					<Link
 						className="bg-brand-red border border-black grid place-content-center rounded-full p-2 transition-all duration-500 ease-in-out hover:mt-1 focus:mt-1 md:p-1 absolute z-50 right-0.5 top-0 hover:bg-light-pink"
 						href=""
@@ -99,9 +152,21 @@ const Header = () => {
 					</Link>
 
 					<span className="inline-block relative size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
-				</div>
+				</motion.div>
 
-				<div className="relative group">
+				<motion.div
+					className="relative group"
+					variants={{
+						hidden: { opacity: 0, y: 50, scale: 0.9 },
+						visible: { opacity: 1, y: 0, scale: 1 },
+					}}
+					transition={{
+						type: "spring",
+						stiffness: 150,
+						damping: 12,
+						mass: 0.8,
+					}}
+				>
 					<Link
 						className="bg-brand-red text-white border w-full border-black py-1.5 px-4 text-2xl rounded-full transition-all duration-500 ease-in-out hover:bg-light-pink hover:text-black hover:top-1 focus:top-1 relative z-[1024] right-0.5 top-0"
 						href=""
@@ -110,13 +175,21 @@ const Header = () => {
 					</Link>
 
 					<span className="inline-block absolute z-10 w-full h-[130%] bg-black border border-black rounded-full -right-0.5 -top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out py-2"></span>
-				</div>
-			</div>
+				</motion.div>
+			</motion.div>
 
-			<button
+			<motion.button
 				className="lg:hidden"
 				type="button"
 				onClick={() => setIsOpen(!isOpen)}
+				initial={{ opacity: 0, y: 100 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{
+					type: "spring",
+					stiffness: 100,
+					damping: 15,
+					mass: 1,
+				}}
 			>
 				{isOpen ? (
 					<svg
@@ -159,8 +232,8 @@ const Header = () => {
 						/>
 					</svg>
 				)}
-			</button>
-		</header>
+			</motion.button>
+		</motion.header>
 	);
 };
 

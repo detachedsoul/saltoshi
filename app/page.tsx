@@ -43,7 +43,7 @@ const Index = () => {
 				}}
 			>
 				<Image
-					className="pointer-events-none h-[300px] md:h-full"
+					className="pointer-events-none h-[350px] md:h-full"
 					src={RoadmapImage}
 					alt="Roadmap"
 					priority

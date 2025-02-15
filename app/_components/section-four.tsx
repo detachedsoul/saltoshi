@@ -254,7 +254,7 @@ const SectionFour = () => {
 									fill="white"
 								/>
 							</svg>
-							Tax Reduction: Drops from 7% → 5% after 1 month
+							Tax Reduction: Drops from 7% → 5% after 1 30 days
 						</li>
 
 						<li className="flex items-start gap gap-4">

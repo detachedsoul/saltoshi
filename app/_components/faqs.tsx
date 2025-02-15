@@ -184,7 +184,9 @@ const Faqs = () => {
 				<div className="relative group">
 					<Link
 						className="bg-brand-red border border-black grid place-content-center rounded-full p-2 transition-all duration-500 ease-in-out hover:mt-1 focus:mt-1 md:p-1 absolute z-50 right-0.5 top-0 hover:bg-light-pink"
-						href=""
+						href="https://x.com/soltoshitools"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<svg
 							className="size-6"
@@ -206,7 +208,9 @@ const Faqs = () => {
 				<div className="relative group">
 					<Link
 						className="bg-brand-red border border-black grid place-content-center rounded-full p-2 transition-all duration-500 ease-in-out hover:mt-1 focus:mt-1 md:p-1 absolute z-50 right-0.5 top-0 hover:bg-light-pink"
-						href=""
+						href="https://t.me/Soltoshichat"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<svg
 							className="size-6"

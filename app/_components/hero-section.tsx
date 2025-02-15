@@ -50,7 +50,9 @@ const HeroSection = () => {
 				<div className="relative group w-auto inline-block">
 					<Link
 						className="bg-light-pink border w-full border-black py-1.5 px-4 text-2xl rounded-full transition-all duration-500 ease-in-out hover:bg-brand-red hover:top-1 focus:top-1 hover:gap-3 focus:gap-3 relative z-[1024] right-0.5 top-0 header inline-flex items-center gap-2"
-						href=""
+						href="https://t.me/SoltoshiBot"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						Start Trading{" "}
 						<svg

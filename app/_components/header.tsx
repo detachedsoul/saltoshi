@@ -100,7 +100,9 @@ const Header = () => {
 				>
 					<Link
 						className="bg-brand-red border border-black grid place-content-center rounded-full p-2 transition-all duration-500 ease-in-out hover:mt-1 focus:mt-1 md:p-1 absolute z-50 right-0.5 top-0 hover:bg-light-pink"
-						href=""
+						href="https://t.me/Soltoshichat"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<svg
 							className="size-10 md:size-6"
@@ -134,7 +136,9 @@ const Header = () => {
 				>
 					<Link
 						className="bg-brand-red border border-black grid place-content-center rounded-full p-2 transition-all duration-500 ease-in-out hover:mt-1 focus:mt-1 md:p-1 absolute z-50 right-0.5 top-0 hover:bg-light-pink"
-						href=""
+						href="https://x.com/soltoshitools"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<svg
 							className="size-10 md:size-6"
@@ -169,7 +173,9 @@ const Header = () => {
 				>
 					<Link
 						className="bg-brand-red text-white border w-full border-black py-1.5 px-4 text-2xl rounded-full transition-all duration-500 ease-in-out hover:bg-light-pink hover:text-black hover:top-1 focus:top-1 relative z-[1024] right-0.5 top-0"
-						href=""
+						href="https://t.me/Soltoshichat"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						BUY $Soltoshi
 					</Link>

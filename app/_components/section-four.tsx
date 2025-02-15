@@ -183,7 +183,9 @@ const SectionFour = () => {
 								<span className="block">Buy/Sell Tax (7%)</span>
 
 								<span className="list-disc space-y-1.5 list-inside">
-									<span>2% Holder rewards (SOL reflections)</span>
+									<span>
+										2% Holder rewards (SOL reflections)
+									</span>
 
 									<span>2% Liquidity pool growth</span>
 
@@ -281,7 +283,9 @@ const SectionFour = () => {
 
 									<span>5% Marketing & partnerships</span>
 
-									<span>5% Liquidity (locked for 6 months)</span>
+									<span>
+										5% Liquidity (locked for 6 months)
+									</span>
 
 									<span>
 										5% Vested Team Reserve (locked for 12+
@@ -383,7 +387,9 @@ const SectionFour = () => {
 				<div className="relative group  mx-auto w-auto inline-block">
 					<Link
 						className="bg-brand-red text-white border w-full border-white py-1.5 px-4 text-2xl rounded-full transition-all duration-500 ease-in-out hover:bg-light-pink hover:text-black hover:top-1 focus:top-1 hover:gap-3 focus:gap-3 relative z-[1024] right-0.5 top-0 header inline-flex items-center gap-2"
-						href=""
+						href="https://t.me/SoltoshiBot"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						Start Trading{" "}
 						<svg

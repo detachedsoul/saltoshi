@@ -200,7 +200,7 @@ const Faqs = () => {
 						</svg>
 					</Link>
 
-					<span className="inline-block relative size-14 md:size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
+					<span className="inline-block relative size-9 md:size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
 				</div>
 
 				<div className="relative group">
@@ -222,7 +222,7 @@ const Faqs = () => {
 						</svg>
 					</Link>
 
-					<span className="inline-block relative size-14 md:size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
+					<span className="inline-block relative size-9 md:size-8 bg-black border border-black rounded-full right-0 top-0.5 group-hover:mt-1 group-focus:mt-1 transition-all duration-500 ease-in-out"></span>
 				</div>
 			</div>
 		</motion.footer>
